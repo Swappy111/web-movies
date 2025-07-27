@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Search from "./components/Search";
 import Spinner from "./components/Spinner";
-import Moviecard from "./components/Moviecard";
+import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
@@ -82,7 +82,7 @@ const App = () => {
             <p className="text-red-500">{errorMessage}</p>
           ): (
             <ul>{movieList.map((movie)=>(
-                  <Moviecard key={movie.id} movie={movie}/>
+                  <MovieCard key={movie.id} movie={movie}/>
             ))}</ul>
           )}
         </section>
